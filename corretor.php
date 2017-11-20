@@ -4,12 +4,6 @@
     <link rel="stylesheet" type="text/css" href="css/master.css">
   </head>
   <body>
-    <?php include 'supmenu.php';
-      if ($_SESSION['logado']==FALSE) {
-        echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
-        exit();
-      }
-    ?>
-
+    <?php include 'supmenu.php'; ?>
   </body>
 </html>
