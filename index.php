@@ -10,10 +10,13 @@
     <?php
       session_start();
 
-      if ($_SESSION['logado']==TRUE && isset($_SESSION["logado"]) && !empty($_SESSION["logado"])) {
-        echo "<script>alert('Usuário já logado!'); window.location = 'corretor.php'</script>";
-        exit();
+      if (isset($_SESSION["logado"]) && !empty($_SESSION["logado"])) {
+        if ($_SESSION['logado']==TRUE) {
+          echo "<script>alert('Usuário já logado!'); window.location = 'corretor.php'</script>";
+          exit();
+        }
       }
+
     ?>
     <form method="POST" action="login.php">
       <h1>Login to Editop</h1>
