@@ -5,11 +5,11 @@
   </head>
   <body>
     <?php include 'supmenu.php';
-      if ($_SESSION['logado']==FALSE) {
-        echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
-        exit();
-      }
+    session_start();
+    if ($_SESSION['logado']==FALSE) {
+      echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+      exit();
+    }
     ?>
-
   </body>
 </html>
