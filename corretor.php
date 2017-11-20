@@ -11,5 +11,16 @@
       exit();
     }
     ?>
+
+    <form method="post" action="enviando.php">
+    Texto:<textarea cols="20" rows="20" name="texto">
+
+    </textarea>
+    Destinatario:<input type="email" name="dest">
+    <input type="submit" name="enviar" value="enviar">
+
+  <br>
+  <br>
+  <a href="historico.php"> Historico </a>
   </body>
 </html>
