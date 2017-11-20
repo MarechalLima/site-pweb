@@ -3,7 +3,7 @@
   <head>
     <title> Editor de Texto </title>
     <meta charset="utf-8">
-    <link rel="icon" href="images/icon.png">
+    <link rel="icon" href="images/icon2.png">
     <link rel="stylesheet" type="text/css" href="css/login.css">
 
     <!--Import Google Icon Font-->
@@ -27,8 +27,8 @@
 
     ?>
     <form method="POST" action="login.php">
-      <h1>Login to Editop</h1>
-      <img src="images/icon.png" alt="icon">
+      <h1>Login to Editor</h1>
+      <img src="images/icon2.png" alt="icon">
       <div id="formulario">
         <b>Usuário</b>
         <input type="text"  name="login" class="inputText">
