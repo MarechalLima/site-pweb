@@ -11,7 +11,7 @@
       session_start();
 
       if ($_SESSION['logado']==TRUE && isset($_SESSION["logado"]) && !empty($_SESSION["logado"])) {
-        echo "<script>alert('Usuário já logado!'); window.location = 'editor.php'</script>";
+        echo "<script>alert('Usuário já logado!'); window.location = 'corretor.php'</script>";
         exit();
       }
     ?>
