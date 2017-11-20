@@ -1,4 +1,10 @@
 <?php
+  session_start();
+  if ($_SESSION['logado']==FALSE) {
+    echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+    exit();
+  }
+
   echo "Email enviado!";
 
   $to      = 'nicholas.aula@gmail.com';
