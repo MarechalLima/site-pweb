@@ -17,7 +17,7 @@
 
       session_start();
 
-      if(isset($_POST["login"]) && isset($_POST["senha"])) {
+      if((isset($_POST["login"]) && isset($_POST["senha"])) && (!empty($_POST["login"]) && !empty($_POST["senha"])) ) {
         $login = $_POST["login"];
         $pass = $_POST["senha"];
         if ($senha[$login] == $pass) {
