@@ -20,9 +20,9 @@
       <img src="images/icon.png" alt="icon">
       <div id="formulario">
         <b>Usuário</b>
-        <input type="text"  name="login" size="50" class="inputText"> <br>
+        <input type="text"  name="login" class="inputText">
         <b>Senha</b>
-        <input type="password" name="senha" class="inputText" size="50">
+        <input type="password" name="senha" class="inputText">
         <input type="submit" value="Enviar" class="inputButton">
       </div>
     </form>
