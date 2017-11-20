@@ -33,14 +33,17 @@ header{
   background-color: #2c3e50;
 }
 #formulario{
-  margin-top: 15px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 2%;
+  width: 20%;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .inputButton{
   border: none;
   display:block;
-  margin:auto;
+  margin-top: 5px;
   padding: 5px;
   border-radius: 10px;
   background-color: #34495e;
@@ -51,11 +54,10 @@ header{
 }
 .inputText{
   display:block;
-  margin:auto;
   padding: 5px;
   border-radius: 10px;
   border-color: #34495e;
   border-style: solid;
-
+  width: 100%;
   font-size: 12pt;
 }

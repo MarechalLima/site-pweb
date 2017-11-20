@@ -17,7 +17,10 @@
     ?>
     <form method="POST" action="login.php">
       <div id="formulario">
-        <input type="text" placeholder="usuário" name="login" size="50" class="inputText"> <br>
+        <b>Usuário</b>
+        <input type="text"  name="login" size="50" class="inputText"> <br>
+        <b>Senha</b>
+        <input type="password" name="senha" class="inputText" size="50">
         <input type="submit" value="Enviar" class="inputButton">
       </div>
     </form>
