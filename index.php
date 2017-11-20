@@ -3,11 +3,11 @@
   <head>
     <title> Editor de Texto </title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
   </head>
   <body>
     <?php
-      include 'supmenu.php';
       session_start();
 
       if ($_SESSION['logado']==TRUE && isset($_SESSION["logado"]) && !empty($_SESSION["logado"])) {
@@ -16,11 +16,13 @@
       }
     ?>
     <form method="POST" action="login.php">
+      <h1>Login to Editop</h1>
+      <img src="images/icon.png" alt="icon">
       <div id="formulario">
         <b>Usuário</b>
-        <input type="text"  name="login" size="50" class="inputText"> <br>
+        <input type="text"  name="login" class="inputText">
         <b>Senha</b>
-        <input type="password" name="senha" class="inputText" size="50">
+        <input type="password" name="senha" class="inputText">
         <input type="submit" value="Enviar" class="inputButton">
       </div>
     </form>
