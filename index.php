@@ -3,6 +3,7 @@
   <head>
     <title> Editor de Texto </title>
     <meta charset="utf-8">
+    <link rel="icon" href="images/icon.png">
     <link rel="stylesheet" type="text/css" href="css/login.css">
   </head>
   <body>
