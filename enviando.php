@@ -19,7 +19,6 @@
       $arquivo[$i] = $aux[$i];
     }
     array_push($arquivo,json_encode($dados));
-    echo(json_decode($arquivo[0])->data);
     file_put_contents('historico.json',$arquivo);
     header('location: corretor.php');
   }
