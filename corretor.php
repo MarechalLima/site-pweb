@@ -13,7 +13,7 @@
     ?>
 
     <div class="container">
-      <form method="post" action="enviando.php" class="col s12">
+      <form method="post" action="email.php" class="col s12">
 
 
       <div class="row">
