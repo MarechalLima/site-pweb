@@ -4,8 +4,6 @@
     <title> Editor de Texto </title>
     <meta charset="utf-8">
     <link rel="icon" href="images/icon2.png">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -26,17 +24,34 @@
       }
 
     ?>
-    <form method="POST" action="login.php">
-      <h1>Login to Editor</h1>
-      <img src="images/icon2.png" alt="icon">
-      <div id="formulario">
-        <b>Usuário</b>
-        <input type="text"  name="login" class="inputText">
-        <b>Senha</b>
-        <input type="password" name="senha" class="inputText">
-        <input type="submit" value="Enviar" class="inputButton">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3 class="center-align">Login to Editop</h3>
+          <form method="POST" action="login.php">
+            <div class="row">
+              <div class="input-field col s6 push-s3">
+                <input id="last_name" type="text" name="login" class="validate">
+                <label for="last_name">Login</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 push-s3">
+                <input id="password" type="password" name="senha" class="validate">
+                <label for="password">Senha</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col offset-s5">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Entrar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
