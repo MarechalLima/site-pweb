@@ -14,8 +14,8 @@
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
   $headers .= 'From: nicholas.aula@gmail.com' . "\r\n" .
     'Reply-To: '.$to . "\r\n";
-
-  if(!empty($message) && !empty($to)){
+  
+  /*if(!empty($message) && !empty($to)){
     mail($to, $subject, $message, $headers);
 
     $arquivo = file("historico.txt");
@@ -31,5 +31,5 @@
   }
   else{
     echo "<script>alert('Dados incompletos!'); window.location = 'corretor.php'</script>";
-  }
+  }*/
  ?>

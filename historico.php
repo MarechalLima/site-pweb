@@ -1,5 +1,5 @@
 <?php
-  $arquivo=file("historico.txt");
+  $arquivo=file("historico.json");
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +16,9 @@
       <ul class="collapsible popout" data-collapsible="accordion">
 
         <?php
+          echo($arquivo[0][data]);
           for($i=0;$i<count($arquivo);$i++){
-            $dados = preg_split("/,/",$arquivo[$i]);
+            $dados = " ";//json_encode($arquivo[$i]);
 
             $dia = $dados[0];
             $hora = $dados[1];
