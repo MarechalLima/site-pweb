@@ -34,7 +34,7 @@
         </div>
         <div class="input-field col s12">
 
-          <div id="editor-texto" contenteditable="true" class="grey lighten-2">
+          <div id="editor-texto" contenteditable="true" class="grey lighten-2" style="padding:1em">
 
           </div>
         </div>
