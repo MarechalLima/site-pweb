@@ -1,5 +1,4 @@
-
-# Como contribuir
+# Como contribuir e #QueDeusNosAjude
 1. Vá até o quadro de issues e escolha uma para mexer, caso tenha alguma issue a acrescentar, acrescente no quadro
 2. Marque a issue como "doing"
 3. Verificar em qual branch você vai mexer
