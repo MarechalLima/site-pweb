@@ -11,10 +11,6 @@
       $senha["nick"] = "123";
       $senha["wolf"] = "abc";
 
-      $pessoas[0]['login'] = "admin";
-      $pessoas[1]['login'] = "nick";
-      $pessoas[2]['login'] = "wolf";
-
       session_start();
 
       if((isset($_POST["login"]) && isset($_POST["senha"])) && (!empty($_POST["login"]) && !empty($_POST["senha"])) ) {
@@ -23,7 +19,6 @@
         if ($senha[$login] == $pass) {
           $_SESSION["logado"] = TRUE;
           header('location: corretor.php');
-          exit();
         }else {
           echo "<script>alert('Senha ou login incorreto(s)!'); window.location = 'index.php'</script>";
         }
