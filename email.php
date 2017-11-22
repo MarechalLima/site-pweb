@@ -7,11 +7,10 @@
 
   echo "Email enviado!";
 
-  $subject = 'the subject';
+  $subject = 'Email suspeito';
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= 'From: nicholas.aula@gmail.com' . "\r\n" .
-  'Reply-To: '.$to . "\r\n";
+  $headers .= 'From: nicholas.aula@gmail.com' . "\r\n";
 
   $texto = $_POST['texto'];
   $destinatario  =$_POST['dest'];
