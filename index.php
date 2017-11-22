@@ -3,9 +3,8 @@
   <head>
     <title> Editor de Texto </title>
     <meta charset="utf-8">
-    <link rel="icon" href="images/icon.png">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-
+    <link rel="icon" href="images/icon2.png">
+    <link rel="stylesheet" href="css/login.css">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -26,17 +25,48 @@
       }
 
     ?>
-    <form method="POST" action="login.php">
-      <h1>Login to Editop</h1>
-      <img src="images/icon.png" alt="icon">
-      <div id="formulario">
-        <b>Usuário</b>
-        <input type="text"  name="login" class="inputText">
-        <b>Senha</b>
-        <input type="password" name="senha" class="inputText">
-        <input type="submit" value="Enviar" class="inputButton">
+    <div class="container">
+      <h3 class="center-align">Bem vindo ao Editop</h3>
+      <div class="row">
+        <div class="col s12">
+          <img src="images/icon.png" alt="icon">
+        </div>
       </div>
-    </form>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card push-s3 z-depth-5 grey lighten-2">
+            <div class="card-content">
+              <div class="row">
+              <div class="col s12">
+                <br>
+                <span class="card-title">Login to Editop</span>
+                <form method="POST" action="login.php">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="last_name" type="text" name="login" class="validate">
+                      <label for="last_name">Login</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" name="senha" class="validate">
+                      <label for="password">Senha</label>
+                    </div>
+                  </div>
+                      <div class="col">
+                        <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Entrar
+                          <i class="material-icons right">send</i>
+                        </button>
+                      </div>
+                  </form>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
