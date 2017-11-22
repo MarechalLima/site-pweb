@@ -2,6 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="stylesheet" type="text/css" href="css/editor.css">
+    <script src="js/corretor.js">
+    </script>
   </head>
   <body>
     <?php include 'supmenu.php';
@@ -15,13 +18,60 @@
     <div class="container">
       <form method="post" action="email.php" class="col s12">
 
-
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="texto-email" class="materialize-textarea" name="texto"></textarea>
-          <label for="texto-email">Texto</label>
+          <input type="text" id="titulo-email" class="materialize-textarea" name="titulo"></textarea>
+          <label for="titulo-email">Título</label>
         </div>
       </div>
+
+      <textarea id="texto-email" name="texto" style="display: none"></textarea>
+
+      <div class="row">
+
+        <div class="col s12 grey-text text-lighteen-1" style="">
+          Texto
+        </div>
+        <div class="input-field col s12">
+
+          <div id="editor-texto" contenteditable="true" class="grey lighten-2">
+
+          </div>
+        </div>
+
+        <div class="col s12">
+          <div class="offset-s1 col s1">
+            <button type="button" onclick="formatCode('bold')" class="waves-effect waves-light btn-flat"><i class="material-icons">format_bold</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" onclick="formatCode('italic')" class="waves-effect waves-light btn-flat"><i class="material-icons">format_italic</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" onclick="formatCode('underline')"class="waves-effect waves-light btn-flat"><i class="material-icons">format_underline</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" onclick="formatCode('removeFormat')" class="waves-effect waves-light btn-flat"><i class="material-icons">format_clear</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" class="waves-effect waves-light btn-flat"><i class="material-icons">text_fields</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" class="waves-effect waves-light btn-flat"><i class="material-icons">format_list_bulleted</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" class="waves-effect waves-light btn-flat"><i class="material-icons">format_list_numbered</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" class="waves-effect waves-light btn-flat"><i class="material-icons">format_color_text</i></button>
+          </div>
+          <div class="col s1">
+            <button type="button" class="waves-effect waves-light btn-flat"><i class="material-icons">format_color_fill</i></button>
+          </div>
+        </div>
+
+      </div>
+
+
 
       <div class="row">
         <div class="input-field col s12">
