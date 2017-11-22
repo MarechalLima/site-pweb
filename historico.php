@@ -1,9 +1,7 @@
 <?php
   $arquivo=file("historico.json");
-  $aux=preg_split("/}/",$arquivo[0]);
-  for($i=0;$i<count($aux)-1;$i++) {
-    $aux[$i].='}';
-  }
+  $arquivo = implode($arquivo);
+  $arquivo = json_decode($arquivo,TRUE);
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +18,12 @@
       <ul class="collapsible popout" data-collapsible="accordion">
 
         <?php
-          for($i=0;$i<count($aux)-1;$i++){
-            $dados = json_decode($aux[$i]);
+          for($i=0;$i<count($arquivo['dados']);$i++){
 
-            $dia = $dados->data;
-            $hora = $dados->hora;
-            $msg = $dados->mensagem;
-            $dest = $dados->destinatario;
+            $dia = $arquivo['dados'][$i]['data'];
+            $hora = $arquivo['dados'][$i]['hora'];
+            $msg = $arquivo['dados'][$i]['mensagem'];
+            $dest = $arquivo['dados'][$i]['destinatario'];
 
         ?>
 
