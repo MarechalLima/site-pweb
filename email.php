@@ -17,13 +17,14 @@
 
   // ABAIXO ESTÁ O CODIGO DO QUE MANDA OS EMAILS PRO HISTORICO
 
+  session_start();
   $texto = $_POST['texto'];
   $destinatario  =$_POST['dest'];
 
   $arquivo = file("historico.json");
 
   if(empty($arquivo)){
-    $arquivo = array("dados"=>array());
+    $arquivo = array("admin"=>array(),"nick"=>array(),"wolf"=>array());
     $arquivo = (array) $arquivo;
   }else{
     $arquivo = implode($arquivo);
@@ -37,7 +38,9 @@
     $dados=array("data"=>$data,"hora"=>$hora,"mensagem"=>$texto,"destinatario"=>$destinatario);
     $dados = (array) $dados;
 
-    array_push($arquivo['dados'],$dados);
+    $user = (string)$_SESSION['usuario'];
+    array_push($arquivo[$user],$dados);
+
 
     file_put_contents('historico.json',json_encode($arquivo));
     header('location: corretor.php');
