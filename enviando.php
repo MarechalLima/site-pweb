@@ -28,5 +28,5 @@
   else{
     echo "<script>alert('Dados incompletos!'); window.location = 'corretor.php'</script>";
   }
-
+  // CODIGO "INUTIL", FIZ UMA COPIA DISSO PARA O EMAIL.PHP
 ?>

@@ -14,22 +14,35 @@
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
   $headers .= 'From: nicholas.aula@gmail.com' . "\r\n" .
     'Reply-To: '.$to . "\r\n";
-  
-  /*if(!empty($message) && !empty($to)){
-    mail($to, $subject, $message, $headers);
 
-    $arquivo = file("historico.txt");
+  // ABAIXO ESTÁ O CODIGO DO QUE MANDA OS EMAILS PRO HISTORICO
 
-    $n = count($arquivo);
+  $texto = $_POST['texto'];
+  $destinatario  =$_POST['dest'];
+
+  $arquivo = file("historico.json");
+
+  if(empty($arquivo)){
+    $arquivo = array("dados"=>array());
+    $arquivo = (array) $arquivo;
+  }else{
+    $arquivo = implode($arquivo);
+    $arquivo = json_decode($arquivo,TRUE);
+  }
+
+  if(!empty($texto) && !empty($destinatario)){
     $data = date("d/m/y");
-    $message = " ".$message;
     $hora = date("H:i");
-    $arquivo[$n]=$data . "," . $hora . "," . trim($message) . "," . trim($to);
-    $arquivo[$n + 1] = "\n";
-    file_put_contents('historico.txt',implode($arquivo));
+
+    $dados=array("data"=>$data,"hora"=>$hora,"mensagem"=>$texto,"destinatario"=>$destinatario);
+    $dados = (array) $dados;
+
+    array_push($arquivo['dados'],$dados);
+
+    file_put_contents('historico.json',json_encode($arquivo));
     header('location: corretor.php');
   }
   else{
     echo "<script>alert('Dados incompletos!'); window.location = 'corretor.php'</script>";
-  }*/
+  }
  ?>
