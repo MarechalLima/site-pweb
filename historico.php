@@ -1,4 +1,8 @@
 <?php
+
+  session_start();
+  $user=(string)$_SESSION['usuario'];
+
   $arquivo=file("historico.json");
   $arquivo = implode($arquivo);
   $arquivo = json_decode($arquivo,TRUE);
@@ -18,12 +22,13 @@
       <ul class="collapsible popout" data-collapsible="accordion">
 
         <?php
-          for($i=0;$i<count($arquivo['dados']);$i++){
 
-            $dia = $arquivo['dados'][$i]['data'];
-            $hora = $arquivo['dados'][$i]['hora'];
-            $msg = $arquivo['dados'][$i]['mensagem'];
-            $dest = $arquivo['dados'][$i]['destinatario'];
+          for($i=0;$i<count($arquivo[$user]);$i++){
+
+            $dia = $arquivo[$user][$i]['data'];
+            $hora = $arquivo[$user][$i]['hora'];
+            $msg = $arquivo[$user][$i]['mensagem'];
+            $dest = $arquivo[$user][$i]['destinatario'];
 
         ?>
 
