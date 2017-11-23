@@ -22,6 +22,7 @@
         $pass = $_POST["senha"];
         if ($senha[$login] == $pass) {
           $_SESSION["logado"] = TRUE;
+          $_SESSION['usuario'] = $login;
           header('location: corretor.php');
           exit();
         }else {
