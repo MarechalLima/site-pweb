@@ -15,3 +15,7 @@ img{
 body{
   background: #eeeeee;
 }
+.activator:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
