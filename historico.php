@@ -29,6 +29,7 @@
             $hora = $arquivo[$user][$i]['hora'];
             $msg = $arquivo[$user][$i]['mensagem'];
             $dest = $arquivo[$user][$i]['destinatario'];
+            $titulo = $arquivo[$user][$i]['titulo'];
 
         ?>
 
@@ -36,7 +37,7 @@
           <div class="collapsible-header" style="display: block">
             <i class="material-icons left">email</i>
             <div class="secondary-content"><?=$dia." às ". $hora?></div>
-            <h5 style="display: inline">Título</h5> <br>
+            <h5 style="display: inline"><?= $titulo ?></h5> <br>
             <?="To: ".$dest?>
 
 
