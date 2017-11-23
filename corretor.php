@@ -17,7 +17,7 @@
     ?>
 
     <div class="container">
-      <form method="post" action="email.php" class="col s12">
+      <form method="post" action="email.php" class="col s12" onsubmit="getContent()">
 
       <div class="row">
         <div class="input-field col s12">
@@ -85,6 +85,10 @@
           <label for="email" data-error="Email inválido" data-success="Email válido">Email    </label>
         </div>
       </div>
+      <button class="btn waves-effect waves-light" type="submit" name="enviar">Enviar
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
 
       <!-- Dropdown do botao text_fields-->
       <ul id='dropdown-size' class='dropdown-content'>
@@ -95,14 +99,24 @@
       </ul>
 
 
-      <button class="btn waves-effect waves-light" type="submit" name="enviar">Enviar
-        <i class="material-icons right">send</i>
-      </button>
+
       <a href="historico.php"  class="btn waves-effect waves-light orange"><i class="material-icons left">history</i> Ver histórico </a>
     </div>
 
     <script src="js/colorPick.min.js"></script>
-    
+    <script type="text/javascript">
+      $("#text-color").colorPick({
+        'onColorSelected': function() {
+          setColor(this.color, 'foreColor');
+        }
+      });
+
+      $("#color-fill").colorPick({
+        'onColorSelected': function() {
+          setColor(this.color, 'hiliteColor');
+        }
+      });
+    </script>
   </body>
 
 
