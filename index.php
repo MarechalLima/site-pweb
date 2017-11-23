@@ -26,12 +26,9 @@
 
     ?>
     <div class="container">
-      <h3 class="center-align">Bem vindo ao Editop</h3>
-      <div class="row">
-        <div class="col s12">
-          <img src="images/icon.png" alt="icon">
-        </div>
-      </div>
+      <h4 class="center-align">Bem vindo ao Editop</h4>
+      <br>
+      <br>
       <div class="row">
         <div class="col s12 m6">
           <div class="card push-s3 z-depth-5 grey lighten-2">
@@ -43,8 +40,8 @@
                 <form method="POST" action="login.php">
                   <div class="row">
                     <div class="input-field col s12">
-                      <input id="last_name" type="text" name="login" class="validate">
-                      <label for="last_name">Login</label>
+                      <input id="login" type="text" name="login" class="validate">
+                      <label for="login">Login</label>
                     </div>
                   </div>
                   <div class="row">
@@ -53,18 +50,51 @@
                       <label for="password">Senha</label>
                     </div>
                   </div>
-                      <div class="col">
-                        <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Entrar
-                          <i class="material-icons right">send</i>
-                        </button>
+                      <div class="row">
+                        <div class="col s12">
+                          <button class="btn waves-effect waves-light light-blue lighten-1" type="submit" name="action">Entrar
+                            <i class="material-icons right">send</i>
+                          </button>
+                        </div>
                       </div>
                   </form>
               </div>
-            </div>
-            </div>
+          </div>
+          <div class="row">
+            <span class="col s12">Não possui uma conta? <span class="teal-text lighten-2 activator">Cadastre-se agora!</span></span>
           </div>
         </div>
+        <div class="card-reveal grey lighten-3">
+          <span class="card-title grey-text text-darken-4">Cadastre-se<i class="material-icons right">close</i></span>
+          <br>
+          <form action="cadastro.php" method="POST">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="user" type="text" name="usuario" class="validate">
+                <label for="user">Nome de usuário ou email</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="password" type="password" name="senhacad" class="validate">
+                <label for="password">Digite a senha</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="password" type="password" name="senhacadconf" class="validate">
+                <label for="password">Confirme a senha</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <button class="btn waves-effect waves-light red lighten-1" type="submit" name="action">Cadastrar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
 
 
 
