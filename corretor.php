@@ -2,6 +2,8 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link rel="stylesheet" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" href="css/transicao/animation.scss">
   </head>
   <body>
     <?php include 'supmenu.php';
@@ -11,7 +13,7 @@
       exit();
     }
     ?>
-
+  <div class="m-right-panel m-page scene_element scene_element--fadeinright">
     <div class="container">
       <form method="post" action="email.php" class="col s12">
 
@@ -36,7 +38,6 @@
       </button>
       <a href="historico.php"  class="btn waves-effect waves-light orange"><i class="material-icons left">history</i> Ver histórico </a>
     </div>
-
-
+  </div>
   </body>
 </html>

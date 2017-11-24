@@ -1,6 +1,4 @@
 
-.m-scene {
-    
     .scene_element {
         animation-duration: 0.25s;
         transition-timing-function: ease-in;
@@ -22,4 +20,3 @@
     .scene_element--fadeinright {
         animation-name: fadeInRight;
     }
-}

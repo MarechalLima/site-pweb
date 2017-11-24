@@ -12,6 +12,9 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <link rel="stylesheet" type="text/css" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" type="text/css" href="css/transicao/animation.scss">
+
   </head>
   <body>
     <?php
@@ -36,6 +39,9 @@
               <div class="row">
               <div class="col s12">
                 <br>
+
+                <div class="m-right-panel m-page scene_element scene_element--fadeinright">
+
                 <span class="card-title">Login to Editop</span>
                 <form method="POST" action="login.php">
                   <div class="row">
@@ -57,6 +63,9 @@
                           </button>
                         </div>
                       </div>
+
+                      </div>
+
                   </form>
               </div>
           </div>
