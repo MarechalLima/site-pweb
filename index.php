@@ -26,17 +26,20 @@
 
     ?>
     <div class="container">
-      <h4 class="center-align">Bem vindo ao Editop</h4>
-      <br>
-      <br>
       <div class="row">
-        <div class="col s12 m6">
-          <div class="card push-s3 z-depth-5 grey lighten-2">
+        <div class="col s6 offset-s3">
+          <div class="card push-s3 z-depth-2 grey lighten-3">
             <div class="card-content">
               <div class="row">
               <div class="col s12">
-                <br>
-                <span class="card-title">Login to Editop</span>
+
+                <span class="card-title">
+                  <img src="images/logo-editop.png" alt="">
+                </span>
+                <span style="font-size:1.5em">Login</span> <br>
+                Ir para o Editop
+
+                <br><br>
                 <form method="POST" action="login.php">
                   <div class="row">
                     <div class="input-field col s12">
