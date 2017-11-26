@@ -16,7 +16,7 @@
     }
     ?>
 
-    <div class="container">
+    <div class="container" style="padding-bottom: 2em;">
       <form method="post" action="email.php" class="col s12" onsubmit="getContent()">
 
       <div class="row">
@@ -35,7 +35,8 @@
         </div>
         <div class="input-field col s12">
 
-          <div id="editor-texto" contenteditable="true" class="grey lighten-2" style="padding:2em">
+          <div id="editor-texto" contenteditable="true" class="grey lighten-2"
+          style="padding:2em">
 
           </div>
         </div>
@@ -108,13 +109,15 @@
       $("#text-color").colorPick({
         'onColorSelected': function() {
           setColor(this.color, 'foreColor');
-        }
+        },
+        'initialColor' : 'rgba(0,0,0,1)'
       });
 
       $("#color-fill").colorPick({
         'onColorSelected': function() {
           setColor(this.color, 'hiliteColor');
-        }
+        },
+        'initialColor' : 'rgba(0,0,0,0)'
       });
     </script>
   </body>
