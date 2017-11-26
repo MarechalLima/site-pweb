@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
   </head>
   <body>
     <header>
@@ -9,7 +10,11 @@
        ?>
 
       <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo - Corretor de Texto</a>
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo">
+            <img src="images/send.png" alt="">
+            Edi<span class="orange-text text-lighten-1">Top</span>
+          </a>
           <ul class="right hide-on-med-and-down">
             <li><a href="index.php">Página Inicial</a></li>
             <li><a href="corretor.php">Corretor</a></li>
