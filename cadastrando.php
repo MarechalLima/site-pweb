@@ -18,15 +18,18 @@
   if(isset($usuario) && isset($senha) && isset($senhaconf)) {
 
     if($senha == $senhaconf) {
-      $dados = array('usuario' => $usuario, 'senha' => $senha);
+      $dados = array($usuario => $senha);
       $dados = (array) $dados;
 
       array_push($arquivo, $dados);
       file_put_contents('cadastro.json',json_encode($arquivo));
 
-      header('location: index.php');
+      //print_r($arquivo[3]["Joao"]);
 
       echo "<script> alert('Cadastrado! :-)'); window.location = 'index.php' </script>";
+
+      header('location: index.php');
+
     } else {
       echo "<script> alert('Senhas diferentes!'); window.location = 'index.php' </script>";
     }
