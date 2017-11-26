@@ -67,7 +67,9 @@
         <div class="card-reveal grey lighten-3">
           <span class="card-title grey-text text-darken-4">Cadastre-se<i class="material-icons right">close</i></span>
           <br>
-          <form action="cadastro.php" method="POST">
+
+
+          <form action="cadastrando.php" method="POST">
             <div class="row">
               <div class="input-field col s12">
                 <input id="user" type="text" name="usuario" class="validate">
@@ -90,6 +92,8 @@
               </div>
             </div>
           </form>
+
+
         </div>
       </div>
     </div>
