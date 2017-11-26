@@ -7,13 +7,23 @@
 
   $arquivo = file("cadastro.json");
 
+  if(empty($arquivo)){
+    $arquivo = array();
+    $arquivo = (array) $arquivo;
+  }else{
+    $arquivo = implode($arquivo);
+    $arquivo = json_decode($arquivo,TRUE);
+  }
+
   if(isset($usuario) && isset($senha) && isset($senhaconf)) {
 
     if($senha == $senhaconf) {
       $dados = array('usuario' => $usuario, 'senha' => $senha);
       $dados = (array) $dados;
 
+      array_push($arquivo, $dados);
       file_put_contents('cadastro.json',json_encode($arquivo));
+
       header('location: index.php');
 
       echo "<script> alert('Cadastrado! :-)'); window.location = 'index.php' </script>";
