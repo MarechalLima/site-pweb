@@ -7,15 +7,9 @@
 
   $arquivo = file("cadastro.json");
 
-  if(empty($arquivo)) {
-
-  } else {
-
-  }
-
   if(isset($usuario) && isset($senha) && isset($senhaconf)) {
 
-    if($senha == $senhaconf) {      
+    if($senha == $senhaconf) {
       $dados = array('usuario' => $usuario, 'senha' => $senha);
       $dados = (array) $dados;
 
