@@ -17,6 +17,10 @@
   $texto = $_POST['texto'];
   $destinatario  =$_POST['dest'];
   $titulo = $_POST['titulo'];
+  if (!empty($texto) && !empty($destinatario) && !empty($subject)) {
+    mail($destinatario, $subject, $texto, $headers);
+  }
+
 
   $arquivo = file("historico.json");
   $arquivo = implode($arquivo);
