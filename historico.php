@@ -18,7 +18,13 @@
     <link rel="stylesheet" href="css/transicao/animation.scss">
   </head>
   <body>
-    <?php include 'supmenu.php' ?>
+    <?php include 'supmenu.php';
+      session_start();
+      if ($_SESSION['logado']==FALSE) {
+        echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+        exit();
+      }
+    ?>
 
     <div class="container">
       <h4> Histórico de envios </h4>
