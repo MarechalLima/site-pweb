@@ -49,6 +49,7 @@
 
 
   if(!empty($texto) && !empty($destinatario)){
+    date_default_timezone_set('America/Maceio');
     $data = date("d/m/y");
     $hora = date("H:i");
 
