@@ -7,9 +7,6 @@
   <body>
     <?php
 
-      $senha["admin"] = "admin";
-      $senha["nick"] = "123";
-      $senha["wolf"] = "abc";
 
       session_start();
 
@@ -27,6 +24,7 @@
         for($i = 0; $i < $count; $i++) {
           if ($arquivo[$i][$login] == $pass) {
             $_SESSION["logado"] = TRUE;
+            $_SESSION["usuario"] = $login;
             header('location: corretor.php');
             $aux = true;
             break;
@@ -37,10 +35,10 @@
 
         if($aux == false) {
           echo "<script> alert('Dados incorretos!'); window.location = 'index.php' </script>";
+        }else {
+          echo "<script>alert('Dados incompletos!'); window.location = 'index.php'</script>";
+          exit();
         }
-      }else {
-        echo "<script>alert('Dados incompletos!'); window.location = 'index.php'</script>";
-      exit();
       }
     ?>
   </body>
