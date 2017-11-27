@@ -12,6 +12,9 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <link rel="stylesheet" type="text/css" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" type="text/css" href="css/transicao/animation.scss">
+
   </head>
   <body>
     <?php
@@ -26,16 +29,24 @@
 
     ?>
     <div class="container">
-      <h4 class="center-align">Bem vindo ao Editop</h4>
-      <br>
-      <br>
       <div class="row">
-        <div class="col s12 m6">
-          <div class="card push-s3 z-depth-5 grey lighten-2">
+        <div class="col s6 offset-s3">
+          <div class="card push-s3 z-depth-2 grey lighten-3">
             <div class="card-content">
               <div class="row">
               <div class="col s12">
+
+                <span class="card-title">
+                  <img src="images/logo-editop.png" alt="">
+                </span>
+                <span style="font-size:1.5em">Login</span> <br>
+                Ir para o Editop
+
+                <br><br>
                 <br>
+
+                <div class="m-right-panel m-page scene_element scene_element--fadeinright">
+
                 <span class="card-title">Login to Editop</span>
                 <form method="POST" action="login.php">
                   <div class="row">
@@ -57,6 +68,9 @@
                           </button>
                         </div>
                       </div>
+
+                      </div>
+
                   </form>
               </div>
           </div>
@@ -67,7 +81,9 @@
         <div class="card-reveal grey lighten-3">
           <span class="card-title grey-text text-darken-4">Cadastre-se<i class="material-icons right">close</i></span>
           <br>
-          <form action="cadastro.php" method="POST">
+
+
+          <form action="cadastrando.php" method="POST">
             <div class="row">
               <div class="input-field col s12">
                 <input id="user" type="text" name="usuario" class="validate">
@@ -90,6 +106,8 @@
               </div>
             </div>
           </form>
+
+
         </div>
       </div>
     </div>

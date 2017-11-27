@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="css/colorPick.min.css">
     <script src="js/corretor.js">
     </script>
+    <link rel="stylesheet" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" href="css/transicao/animation.scss">
   </head>
   <body>
     <?php include 'supmenu.php';
@@ -18,6 +20,9 @@
 
     <div class="container" style="padding-bottom: 2em;">
       <form method="post" action="email.php" class="col s12" onsubmit="getContent()">
+  <div class="m-right-panel m-page scene_element scene_element--fadeinright">
+    <div class="container">
+      <form method="post" action="email.php" class="col s12">
 
       <div class="row">
         <div class="input-field col s12">
@@ -103,6 +108,7 @@
 
       <a href="historico.php"  class="btn waves-effect waves-light orange"><i class="material-icons left">history</i> Ver histórico </a>
     </div>
+  </div>
 
     <script src="js/colorPick.min.js"></script>
     <script type="text/javascript">
