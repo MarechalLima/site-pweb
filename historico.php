@@ -37,7 +37,7 @@
           if(array_key_exists($user,$arquivo)){
             if($arquivo[$user]!=Null){
               $vazio=False;
-              for($i=0;$i<count($arquivo[$user]);$i++){
+              for($i=count($arquivo[$user]) - 1; $i>=0; $i--){
 
                 $dia = $arquivo[$user][$i]['data'];
                 $hora = $arquivo[$user][$i]['hora'];
