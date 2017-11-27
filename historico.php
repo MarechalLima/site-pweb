@@ -11,12 +11,17 @@
   <head>
     <meta charset="utf-8">
     <title>Histórico</title>
+
+    <link rel="stylesheet" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" href="css/transicao/animation.scss">
   </head>
-  <body>
+  <body> 
     <?php include 'supmenu.php' ?>
 
     <div class="container">
       <h4> Histórico de envios </h4>
+
+      <div class="m-right-panel m-page scene_element scene_element--fadeinright">
       <ul class="collapsible popout" data-collapsible="accordion">
 
         <?php
@@ -54,7 +59,7 @@
           <i class="material-icons">create</i>
         </a>
       </div>
-
+      </div>
     </div>
 
     <script type="text/javascript">
