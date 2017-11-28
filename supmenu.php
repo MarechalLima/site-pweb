@@ -28,8 +28,7 @@
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-      </nav
-
+      </nav>
     </header>
   </body>
 </html>
