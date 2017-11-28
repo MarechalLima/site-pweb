@@ -34,11 +34,13 @@
         }
 
         if($aux == false) {
-          echo "<script> alert('Dados incorretos!'); window.location = 'index.php' </script>";
-        }else {
-          echo "<script>alert('Dados incompletos!'); window.location = 'index.php'</script>";
-          exit();
+          header('location: index.php?IncorrectData=TRUE');          
+          //echo "<script> alert('Dados incorretos!'); window.location = 'index.php' </script>";
         }
+      }else {
+        header('location: index.php?IncompleteData=TRUE');          
+       //echo "<script>alert('Dados incompletos!'); window.location = 'index.php'</script>";
+        exit();
       }
     ?>
   </body>

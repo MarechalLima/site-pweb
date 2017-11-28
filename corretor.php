@@ -9,14 +9,37 @@
     </script>
     <link rel="stylesheet" href="css/transicao/keyframes.css">
     <link rel="stylesheet" href="css/transicao/animation.scss">
+
+
+    <script>
+      function showToast(message){//Função que exibe o toast
+        Materialize.toast(message, 3000);
+      }
+    </script>
+
   </head>
   <body>
     <?php include 'supmenu.php';
     session_start();
     if ($_SESSION['logado']==FALSE) {
-      echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+      header('location: index.php?NotLoggedIn=TRUE');
+      //echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
       exit();
     }
+
+          
+    if (isset($_REQUEST['IncompleteData'])){//Verifica se os dados estão incompletos
+      echo "<script>showToast('Dados incompletos!')</script>";
+      unset($_REQUEST['IncompleteData']);
+    }
+
+
+          
+    if (isset($_REQUEST['MsgSent'])){//Verifica se a msg foi enviada
+      echo "<script>showToast('Mensagem enviada!')</script>";
+      unset($_REQUEST['MsgSent']);
+    }
+
     ?>
 
     <div class="container" style="padding-bottom: 2em;">

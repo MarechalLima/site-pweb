@@ -1,7 +1,8 @@
 <?php
   session_start();
   if ($_SESSION['logado']==FALSE) {
-  echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+  header('location: index.php?NotLoggedIn=TRUE');
+  //echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
   exit();
   }
 
@@ -62,9 +63,13 @@
 
     file_put_contents('historico.json',json_encode($arquivo));
     header('location: corretor.php');
+
+    header('location: corretor.php?MsgSent=TRUE');
+    
   }
   else{
-    echo "<script>alert('Dados incompletos!'); window.location = 'corretor.php'</script>";
+    header('location: corretor.php?IncompleteData=TRUE');
+    //echo "<script>alert('Dados incompletos!'); window.location = 'corretor.php'</script>";
   }
 
 ?>

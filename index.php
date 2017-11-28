@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="css/transicao/keyframes.css">
     <link rel="stylesheet" type="text/css" href="css/transicao/animation.scss">
 
+    <script>
+      function showToast(message){//Função que exibe o toast
+        Materialize.toast(message, 3000);
+      }
+    </script>
+
   </head>
   <body>
     <?php
@@ -23,6 +29,37 @@
       }
 
       include 'materialize.php';
+
+
+      if (isset($_REQUEST['FromLogout'])){//Verifica se o logout foi efetuado
+        echo "<script>showToast('Logout realizado!')</script>";
+        unset($_REQUEST['FromLogout']);
+      }
+
+
+      if (isset($_REQUEST['NotLoggedIn'])){//Verifica se o usuário não estava logado
+        echo "<script>showToast('Usuário não logado!')</script>";
+        unset($_REQUEST['NotLoggedIn']);
+      }
+
+
+      if (isset($_REQUEST['IncorrectData'])){//Verifica se o usuário estiver com os dados incorretos
+        echo "<script>showToast('Dados incorretos!')</script>";
+        unset($_REQUEST['IncorrectData']);
+      }
+
+      if (isset($_REQUEST['IncompleteData'])){//Verifica se o usuário não estava logado
+        echo "<script>showToast('Dados incompletos!')</script>";
+        unset($_REQUEST['IncompleteData']);
+      }
+      if (isset($_REQUEST['SignUp'])){//Verifica se o usuário não estava logado
+        echo "<script>showToast('Usuário cadastrado!')</script>";
+        unset($_REQUEST['SignUp']);
+      }
+      if (isset($_REQUEST['DifferentPasswords'])){//Verifica se o usuário não estava logado
+        echo "<script>showToast('Senhas diferentes!')</script>";
+        unset($_REQUEST['DifferentPasswords']);
+      }  
 
     ?>
     <div class="container">

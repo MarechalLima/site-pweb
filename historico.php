@@ -20,7 +20,8 @@
   <body>
     <?php include 'supmenu.php';
       if ($_SESSION['logado']==FALSE) {
-        echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+        header('location: index.php?NotLoggedIn=TRUE');
+        //echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
         exit();
       }
     ?>
