@@ -5,9 +5,9 @@
   exit();
   }
 
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= 'From: nicholas.aula@gmail.com' . "\r\n";
+  $headers  = 'MIME-Version: 1.0' . PHP_EOL;
+  $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
+  $headers .= 'From: nicholas.aula@gmail.com' . PHP_EOL;
 
 
   $texto = $_POST['texto'];
