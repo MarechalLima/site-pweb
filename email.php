@@ -5,22 +5,19 @@
   exit();
   }
 
-  echo "Email enviado!";
-
-  $subject = $_POST['titulo'];
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
   $headers .= 'From: nicholas.aula@gmail.com' . "\r\n";
 
-  // Codigo do historico a baixo
 
   $texto = $_POST['texto'];
   $destinatario  =$_POST['dest'];
   $titulo = $_POST['titulo'];
-  if (!empty($texto) && !empty($destinatario) && !empty($subject)) {
-    mail($destinatario, $subject, $texto, $headers);
+  if (!empty($texto) && !empty($destinatario) && !empty($titulo)) {
+    mail($destinatario, $titulo, $texto, $headers);
   }
 
+  // Codigo do historico a baixo
 
   $arquivo = file("historico.json");
   $arquivo = implode($arquivo);
