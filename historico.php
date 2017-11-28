@@ -1,9 +1,11 @@
 <?php
+
+  session_start();
+  $user=(string)$_SESSION['usuario'];
+
   $arquivo=file("historico.json");
-  $aux=preg_split("/}/",$arquivo[0]);
-  for($i=0;$i<count($aux)-1;$i++) {
-    $aux[$i].='}';
-  }
+  $arquivo = implode($arquivo);
+  $arquivo = json_decode($arquivo,TRUE);
 ?>
 
 <!DOCTYPE html>
@@ -11,22 +13,39 @@
   <head>
     <meta charset="utf-8">
     <title>Histórico</title>
+    <link rel="icon" href="images/send-blue.png">
+    <link rel="stylesheet" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" href="css/transicao/animation.scss">
   </head>
   <body>
-    <?php include 'supmenu.php' ?>
+    <?php include 'supmenu.php';
+      if ($_SESSION['logado']==FALSE) {
+        header('location: index.php?NotLoggedIn=TRUE');
+        //echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+        exit();
+      }
+    ?>
 
     <div class="container">
       <h4> Histórico de envios </h4>
+
+      <div class="m-right-panel m-page scene_element scene_element--fadeinright">
       <ul class="collapsible popout" data-collapsible="accordion">
 
         <?php
-          for($i=0;$i<count($aux)-1;$i++){
-            $dados = json_decode($aux[$i]);
+          $vazio = True;
+          if(array_key_exists($user,$arquivo)){
+            if($arquivo[$user]!=Null){
+              $vazio=False;
+              for($i=count($arquivo[$user]) - 1; $i>=0; $i--){
 
-            $dia = $dados->data;
-            $hora = $dados->hora;
-            $msg = $dados->mensagem;
-            $dest = $dados->destinatario;
+                $dia = $arquivo[$user][$i]['data'];
+                $hora = $arquivo[$user][$i]['hora'];
+                $msg = $arquivo[$user][$i]['mensagem'];
+                $dest = $arquivo[$user][$i]['destinatario'];
+                $titulo = $arquivo[$user][$i]['titulo'];
+
+
 
         ?>
 
@@ -34,7 +53,7 @@
           <div class="collapsible-header" style="display: block">
             <i class="material-icons left">email</i>
             <div class="secondary-content"><?=$dia." às ". $hora?></div>
-            <h5 style="display: inline">Título</h5> <br>
+            <h5 style="display: inline"><?= $titulo ?></h5> <br>
             <?="To: ".$dest?>
 
 
@@ -46,7 +65,13 @@
         </li>
 
 
-      <?php } ?>
+      <?php }
+          }
+        }
+        if($vazio){
+          echo "O usuario $user ainda não enviou email's";
+        }
+       ?>
 
       </ul>
       <div class="fixed-action-btn">
@@ -54,7 +79,7 @@
           <i class="material-icons">create</i>
         </a>
       </div>
-
+      </div>
     </div>
 
     <script type="text/javascript">

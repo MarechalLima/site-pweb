@@ -4,20 +4,49 @@
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <link rel="stylesheet" type="text/css" href="css/editor.css">
     <link rel="stylesheet" type="text/css" href="css/colorPick.min.css">
+    <link rel="icon" href="images/send-blue.png">
     <script src="js/corretor.js">
     </script>
+    <link rel="stylesheet" href="css/transicao/keyframes.css">
+    <link rel="stylesheet" href="css/transicao/animation.scss">
+
+
+    <script>
+      function showToast(message){//Função que exibe o toast
+        Materialize.toast(message, 3000);
+      }
+    </script>
+
   </head>
   <body>
     <?php include 'supmenu.php';
     session_start();
     if ($_SESSION['logado']==FALSE) {
-      echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
+      header('location: index.php?NotLoggedIn=TRUE');
+      //echo "<script>alert('Usuário não logado!'); window.location = 'index.php'</script>";
       exit();
     }
+
+          
+    if (isset($_REQUEST['IncompleteData'])){//Verifica se os dados estão incompletos
+      echo "<script>showToast('Dados incompletos!')</script>";
+      unset($_REQUEST['IncompleteData']);
+    }
+
+
+          
+    if (isset($_REQUEST['MsgSent'])){//Verifica se a msg foi enviada
+      echo "<script>showToast('Mensagem enviada!')</script>";
+      unset($_REQUEST['MsgSent']);
+    }
+
     ?>
 
     <div class="container" style="padding-bottom: 2em;">
       <form method="post" action="email.php" class="col s12" onsubmit="getContent()">
+  <div class="m-right-panel m-page scene_element scene_element--fadeinright">
+    <div class="container">
+      <form method="post" action="email.php" class="col s12">
 
       <div class="row">
         <div class="input-field col s12">
@@ -99,10 +128,8 @@
         <li><a href="#"onclick="formatCode('fontSize',1)" style="font-size: 8pt;">Pequeno</a></li>
       </ul>
 
-
-
-      <a href="historico.php"  class="btn waves-effect waves-light orange"><i class="material-icons left">history</i> Ver histórico </a>
     </div>
+  </div>
 
     <script src="js/colorPick.min.js"></script>
     <script type="text/javascript">
