@@ -16,10 +16,10 @@
       session_start();
 
       if (isset($_SESSION["logado"]) && !empty($_SESSION["logado"])) {
-        if ($_SESSION['logado']==TRUE) {
-          echo "<script>alert('Usuário já logado!'); window.location = 'corretor.php'</script>";
-          exit();
-        }
+          if ($_SESSION['logado']==true) {
+              echo "<script>alert('Usuário já logado!'); window.location = 'corretor.php'</script>";
+              exit();
+          }
       }
 
       include 'materialize.php';
@@ -36,15 +36,17 @@
                 <span class="card-title">
                   <img src="images/logo-editop.png" alt="">
                 </span>
+                <br><br><br>
+
                 <span style="font-size:1.5em">Login</span> <br>
                 Ir para o Editop
 
-                <br><br>
-                <br>
+
+
 
                 <div class="m-right-panel m-page scene_element scene_element--fadeinright">
 
-                <span class="card-title">Login to Editop</span>
+
                 <form method="POST" action="login.php">
                   <div class="row">
                     <div class="input-field col s12">
