@@ -16,7 +16,7 @@
             <img src="images/logo-editop-navbar.png" alt="">
           </a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="index.php">Página Inicial</a></li>
+            <li><a href="historico.php">Enviados</a></li>
             <li><a href="corretor.php">Corretor</a></li>
             <li><a href="logout.php">Logout</a></li>
           </ul>

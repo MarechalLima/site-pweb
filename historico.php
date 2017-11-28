@@ -13,7 +13,7 @@
   <head>
     <meta charset="utf-8">
     <title>Histórico</title>
-
+    <link rel="icon" href="images/send-blue.png">
     <link rel="stylesheet" href="css/transicao/keyframes.css">
     <link rel="stylesheet" href="css/transicao/animation.scss">
   </head>
