@@ -31,7 +31,7 @@
     }
 
     if($aux1 == true) {
-      echo "<script> alert('Usuário já cadastrado!'); window.location = 'index.php' </script>";
+      header('location: index.php?UserAlreadyRegistered=TRUE');      
     } else {
       if($senha == $senhaconf) {
         $dados = array($usuario => $senha);
