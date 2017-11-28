@@ -3,7 +3,7 @@
   <head>
     <title> Editor de Texto </title>
     <meta charset="utf-8">
-    <link rel="icon" href="images/icon2.png">
+    <link rel="icon" href="images/send-blue.png">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/master.css">
 
@@ -17,7 +17,7 @@
 
       if (isset($_SESSION["logado"]) && !empty($_SESSION["logado"])) {
           if ($_SESSION['logado']==true) {
-              echo "<script>alert('Usuário já logado!'); window.location = 'corretor.php'</script>";
+              echo "<script>alert('Usuário já logado!'); window.location = 'historico.php'</script>";
               exit();
           }
       }

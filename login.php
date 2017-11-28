@@ -25,7 +25,7 @@
           if ($arquivo[$i][$login] == $pass) {
             $_SESSION["logado"] = TRUE;
             $_SESSION["usuario"] = $login;
-            header('location: corretor.php');
+            header('location: historico.php');
             $aux = true;
             break;
           } else {

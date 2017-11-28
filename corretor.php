@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="css/master.css">
     <link rel="stylesheet" type="text/css" href="css/editor.css">
     <link rel="stylesheet" type="text/css" href="css/colorPick.min.css">
+    <link rel="icon" href="images/send-blue.png">
     <script src="js/corretor.js">
     </script>
     <link rel="stylesheet" href="css/transicao/keyframes.css">
@@ -104,9 +105,6 @@
         <li><a href="#"onclick="formatCode('fontSize',1)" style="font-size: 8pt;">Pequeno</a></li>
       </ul>
 
-
-
-      <a href="historico.php"  class="btn waves-effect waves-light orange"><i class="material-icons left">history</i> Ver histórico </a>
     </div>
   </div>
 
