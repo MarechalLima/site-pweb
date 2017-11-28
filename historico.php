@@ -74,12 +74,14 @@
        ?>
 
       </ul>
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large waves-effect waves-light red right modal-trigger" href="corretor.php">
-          <i class="material-icons">create</i>
-        </a>
+
       </div>
-      </div>
+    </div>
+
+    <div class="fixed-action-btn active   " style="bottom:45px; right:24px;">
+      <a class="btn-floating btn-large waves-effect waves-light red right modal-trigger"  href="corretor.php">
+        <i class="material-icons">create</i>
+      </a>
     </div>
 
     <script type="text/javascript">
