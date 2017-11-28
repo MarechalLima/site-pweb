@@ -60,6 +60,10 @@
         echo "<script>showToast('Senhas diferentes!')</script>";
         unset($_REQUEST['DifferentPasswords']);
       }  
+      if (isset($_REQUEST['UserAlreadyRegistered'])){//Verifica se o usuário não estava logado
+        echo "<script>showToast('Usuário já cadastrado!')</script>";
+        unset($_REQUEST['UserAlreadyRegistered']);
+      }  
 
     ?>
     <div class="container">
